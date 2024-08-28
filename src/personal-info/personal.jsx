@@ -1,6 +1,15 @@
+import { useState } from "react";
+
 function Personal() {
+    const [fullName, setFullName] = useState('');
+
+    function handleNameChange(e) {
+        setFullName(e.target.value);
+    }
+
     function handleSubmit(e) {
         e.preventDefault();
+        console.log(fullName);
     };
 
 
@@ -10,7 +19,13 @@ function Personal() {
                 <legend>Personal Information</legend>
                 <div className="input">
                     <label htmlFor="full-name" className="full-name">Full Name</label>
-                    <input id="full-name" type="text" name="full-name" />
+                    <input 
+                        id="full-name" 
+                        type="text" 
+                        name="full-name" 
+                        value={fullName} 
+                        onChange={handleNameChange}
+                    />
                 </div>
 
                 <div className="input">
@@ -26,6 +41,10 @@ function Personal() {
                 <div className="input">
                     <label htmlFor="City">City</label>
                     <input id="city" type="text" name="city" />
+                </div>
+
+                <div className="submit">
+                    <button type="button" onClick={handleSubmit}>Save</button>
                 </div>
             </form>
         </>
