@@ -1,22 +1,13 @@
-import { useState } from "react";
-
-function Personal({fullName, handleNameChange}) {
-    const [phoneNumber, setPhoneNumber] = useState('');
-    const [email, setEmail] = useState('');
-    const [city, setCity] = useState('');
-
-    function handlePhoneChange(e) {
-        setPhoneNumber(e.target.value);
-    }
-
-    function handleEmailChange(e) {
-        setEmail(e.target.value);
-    }
-
-    function handleCityChange(e) {
-        setCity(e.target.value);
-    }
-
+function Personal({
+    fullName, 
+    handleNameChange,
+    phoneNumber,
+    handlePhoneChange,
+    email,
+    handleEmailChange,
+    city,
+    handleCityChange
+}) {    
     function handleSubmit(e) {
         e.preventDefault();
         console.log(fullName);
