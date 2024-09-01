@@ -1,14 +1,9 @@
 import { useState } from "react";
 
-function Personal() {
-    const [fullName, setFullName] = useState('');
+function Personal({fullName, handleNameChange}) {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [email, setEmail] = useState('');
     const [city, setCity] = useState('');
-
-    function handleNameChange(e) {
-        setFullName(e.target.value);
-    }
 
     function handlePhoneChange(e) {
         setPhoneNumber(e.target.value);
@@ -25,9 +20,9 @@ function Personal() {
     function handleSubmit(e) {
         e.preventDefault();
         console.log(fullName);
-        console.log(phoneNumber);
-        console.log(email);
-        console.log(city);
+        // console.log(phoneNumber);
+        // console.log(email);
+        // console.log(city);
     };
 
 
