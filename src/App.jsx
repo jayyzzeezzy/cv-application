@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Personal from './personal-info/personal'
+import Preview from './Preview/Preview';
 
 function App() {
   const [fullName, setFullName] = useState('');
@@ -24,7 +25,9 @@ function App() {
           />
         </div>
         <div className='preview'>
-          
+          <Preview 
+            fullName={fullName}
+          />
         </div>
       </div>
       
