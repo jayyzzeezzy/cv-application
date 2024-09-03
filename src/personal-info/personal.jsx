@@ -6,7 +6,9 @@ function Personal({
     email,
     handleEmailChange,
     city,
-    handleCityChange
+    handleCityChange,
+    state,
+    handleStateChange
 }) {    
     function handleSubmit(e) {
         e.preventDefault();
@@ -55,13 +57,24 @@ function Personal({
                 </div>
 
                 <div className="input">
-                    <label htmlFor="City">City</label>
+                    <label htmlFor="city">City</label>
                     <input 
                         id="city" 
                         type="text" 
                         name="city" 
                         value={city}
                         onChange={handleCityChange}
+                    />
+                </div>
+
+                <div className="input">
+                    <label htmlFor="state">State</label>
+                    <input 
+                    id="state"
+                    type="text"
+                    name="state"
+                    value={state}
+                    onChange={handleStateChange} 
                     />
                 </div>
 
