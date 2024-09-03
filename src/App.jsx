@@ -10,6 +10,7 @@ function App() {
   const [email, setEmail] = useState('');
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
+  const [personalFormStatus, setPersonalFormStatus] = useState('pending');
   const [eduFormStatus, setEduFormStatus] = useState('pending');
   const [school, setSchool] = useState('');
   const [degree, setDegree] = useState('');
@@ -17,7 +18,13 @@ function App() {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   
+  function handlePersonalSubmit() {
+    setPersonalFormStatus('submitted');
+  }
 
+  function handlePersonalEdit() {
+    setPersonalFormStatus('edit');
+  }
 
 
   function handleEduSubmit() {
@@ -43,6 +50,9 @@ function App() {
             handleCityChange={(e) => setCity(e.target.value)}
             state={state}
             handleStateChange={(e) => setState(e.target.value)}
+            formStatus={personalFormStatus}
+            handleSubmit={handlePersonalSubmit}
+            handleEdit={handlePersonalEdit}
           />
         </div>
         <div className='input'>
