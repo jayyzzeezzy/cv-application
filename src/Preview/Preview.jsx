@@ -9,6 +9,12 @@ function Preview({
     location,
     startDate,
     endDate,
+    company,
+    position,
+    jobLocation,
+    jobStartDate,
+    jobEndDate,
+    description
 
 }) {
     return (
@@ -33,11 +39,11 @@ function Preview({
         <hr />
         <section className="experience">
             <div>
-                <p className="company"></p>
-                <p className="position-title"></p>
-                <p className="timeline"></p>
-                <p className="location"></p>
-                <p className="description"></p>
+                <p className="company">{company}</p>
+                <p className="position-title">{position}</p>
+                <p className="timeline">{jobStartDate + ' - ' + jobEndDate}</p>
+                <p className="location">{jobLocation}</p>
+                <p className="description">{description}</p>
             </div>
         </section>
         </>
