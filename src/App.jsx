@@ -1,30 +1,30 @@
 import { useState } from 'react'
 import './App.css'
-import Personal from './personal-info/personal'
+import Personal from './Personal-info/Personal'
 import Preview from './Preview/Preview';
 import Education from './Education/Education';
 import Experience from './Experience/Experience';
 
 function App() {
-  const [fullName, setFullName] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [email, setEmail] = useState('');
-  const [city, setCity] = useState('');
-  const [state, setState] = useState('');
+  const [fullName, setFullName] = useState('John Doe');
+  const [phoneNumber, setPhoneNumber] = useState('(000)000-0000');
+  const [email, setEmail] = useState('johndoe@gmail.com');
+  const [city, setCity] = useState('San Francisco');
+  const [state, setState] = useState('CA');
   const [personalFormStatus, setPersonalFormStatus] = useState('pending');
   const [eduFormStatus, setEduFormStatus] = useState('pending');
-  const [school, setSchool] = useState('');
-  const [degree, setDegree] = useState('');
-  const [location, setLocation] = useState('');
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
-  const [company, setCompany] = useState('');
-  const [position, setPosition] = useState('');
-  const [jobLocation, setJobLocation] = useState('');
-  const [jobStartDate, setJobStartDate] = useState('');
-  const [jobEndDate, setJobEndDate] = useState('');
+  const [school, setSchool] = useState('Standford University');
+  const [degree, setDegree] = useState('Bachelor of Science, Computer Science');
+  const [location, setLocation] = useState('Stanford, CA');
+  const [startDate, setStartDate] = useState('8/2000');
+  const [endDate, setEndDate] = useState('6/2004');
+  const [company, setCompany] = useState('Google');
+  const [position, setPosition] = useState('Software Engineer');
+  const [jobLocation, setJobLocation] = useState('Mountain View, CA');
+  const [jobStartDate, setJobStartDate] = useState('9/2004');
+  const [jobEndDate, setJobEndDate] = useState('present');
   const [expFormStatus, setExpFormStatus] = useState('pending');
-  const [description, setDescription] = useState('');
+  const [description, setDescription] = useState('● Created GMail.');
   
   function handlePersonalSubmit() {
     setPersonalFormStatus('submitted');
@@ -54,7 +54,7 @@ function App() {
   return (
     <>
       <div className='container'>
-        <div className='input'>
+        <div className='form'>
           <Personal 
             fullName={fullName}
             handleNameChange={(e) => setFullName(e.target.value)}
@@ -70,8 +70,7 @@ function App() {
             handleSubmit={handlePersonalSubmit}
             handleEdit={handlePersonalEdit}
           />
-        </div>
-        <div className='input'>
+
           <Education 
             school={school}
             handleSchoolChange={(e) => setSchool(e.target.value)}
@@ -87,8 +86,7 @@ function App() {
             handleSubmit={handleEduSubmit}
             handleEdit={handleEduEdit}
           />
-        </div>
-        <div className='input'>
+
           <Experience 
             company={company}
             handleCompanyChange={(e) => setCompany(e.target.value)}
