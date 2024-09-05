@@ -1,8 +1,112 @@
-.preview {
-  box-shadow: 5px 5px 5px 5px black;
+#root {
+  min-height: 100%;
 }
 
 .container {
   display: flex;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.form {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
+}
+
+form {
+  border: 1px solid black;
+  max-width: 600px;
+  padding: 10px;
+  margin: 10px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  margin-bottom: 5px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 8px 0px;
+}
+
+.timeline > input {
+  max-width: 100px;
+}
+
+.textarea {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+textarea {
+  max-width: 500px;
+  height: 100px;
+}
+
+.preview p {
+  font-size: 1.1rem;
+}
+
+.preview {
+  box-shadow: 0px 0px 5px 5px gray;
+  width: calc(100vw - 50vw - 10px);
+  margin: 10px;
+  padding: 10px 20px;
+}
+
+.name,
+.education > h1,
+.experience > h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.personal-info {
+  display: flex;
+}
+
+.personal-info > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.education-split,
+.experience-split {
+  display: flex;
+}
+
+.education-split .left,
+.experience-split .left {
+  min-width: 200px;
+}
+
+.education-split .school,
+.experience-split .company {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+hr {
+  margin: 10px 0px;
+}
+
+.education-timeline,
+.school,
+.experience-timeline,
+.company,
+.position-title {
+  margin-bottom: 10px;
 }

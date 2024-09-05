@@ -24,7 +24,7 @@ function App() {
   const [jobStartDate, setJobStartDate] = useState('9/2004');
   const [jobEndDate, setJobEndDate] = useState('present');
   const [expFormStatus, setExpFormStatus] = useState('pending');
-  const [description, setDescription] = useState('● Created GMail.');
+  const [description, setDescription] = useState('● Lorem ipsum odor amet, consectetuer adipiscing elit. Morbi elementum varius magnis semper aliquam, etiam facilisis enim imperdiet.');
   
   function handlePersonalSubmit() {
     setPersonalFormStatus('submitted');

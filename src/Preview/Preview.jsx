@@ -29,21 +29,31 @@ function Preview({
         </section>
         <hr />
         <section className="education">
-            <div>
-                <p className="school">{school}</p>
-                <p className="degree">{degree}</p>
-                <p className="timeline">{startDate + ' - ' + endDate}</p>
-                <p className="location">{location}</p>
+            <h1>Education</h1>
+            <div className="education-split">
+                <div className="left">
+                    <p className="education-timeline">{startDate + ' - ' + endDate}</p>
+                    <p className="education-location">{location}</p>
+                </div>
+                <div className="right">
+                    <p className="school">{school}</p>
+                    <p className="degree">{degree}</p>
+                </div>
             </div>
         </section>
         <hr />
         <section className="experience">
-            <div>
-                <p className="company">{company}</p>
-                <p className="position-title">{position}</p>
-                <p className="timeline">{jobStartDate + ' - ' + jobEndDate}</p>
-                <p className="location">{jobLocation}</p>
-                <p className="description">{description}</p>
+            <h1>Experience</h1>
+            <div className="experience-split">
+                <div className="left">
+                    <p className="experience-timeline">{jobStartDate + ' - ' + jobEndDate}</p>
+                    <p className="experience-location">{jobLocation}</p>
+                </div>
+                <div className="right">
+                    <p className="company">{company}</p>
+                    <p className="position-title">{position}</p>
+                    <p className="experience-description">{description}</p>
+                </div>
             </div>
         </section>
         </>
