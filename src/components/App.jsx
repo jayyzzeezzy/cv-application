@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import './App.css'
-import Personal from './Personal-info/Personal'
-import Preview from './Preview/Preview';
-import Education from './Education/Education';
-import Experience from './Experience/Experience';
+import '../styles/App.css'
+import Personal from '../components/Personal-info/Personal';
+import Preview from '../components/Preview/Preview';
+import Education from '../components/Education/Education';
+import Experience from '../components/Experience/Experience';
 
 function App() {
   const [fullName, setFullName] = useState('John Doe');
